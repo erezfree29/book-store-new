@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable no-restricted-globals */
 /* eslint-disable no-unused-vars */
 import useState from 'react-hook-use-state';
 
@@ -20,8 +22,14 @@ const Form = () => {
     setCategory(event.target.value);
   };
 
+  const newBook = {
+    id: bookID,
+    title: bookTitle,
+    category: bokCategory,
+  };
+
   const postBookTOStore = () => {
-    fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/7QlpK6CmgdU0hZt33zXJ/books', {
+    fetch(baseURL, {
 
       // Adding method type
       method: 'POST',
@@ -39,4 +47,39 @@ const Form = () => {
       },
     });
   };
+
+  function submitBookThunks(newBook) {
+    return function (dispatch) {
+      return postBookTOStore().then(
+        (book) => dispatch(addBook(newBook, book)),
+        (error) => console.log('error'),
+      );
+    };
+  }
+
+  const submitBook = async () => {
+    await postBookTOStore();
+    await submitBookThunks(newBook);
+    document.querySelector('.title').value = '';
+    document.querySelector('.category').value = '';
+    event.preventDefault();
+  };
+  return (
+    <div>
+      <h3>Add new book</h3>
+      <form>
+        <label>Title:</label>
+        <br />
+        <input type="text" className="title" name="title" onChange={updateTitle} />
+        <br />
+        <label>Category:</label>
+        <br />
+        <input type="text" className="category" name="category" onChange={updateAuthor} />
+        <br />
+        <input type="submit" value="Submit" onClick={submitBook} />
+      </form>
+    </div>
+  );
 };
+
+export default Form;
