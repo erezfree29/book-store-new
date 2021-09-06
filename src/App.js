@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 
 import { store } from './redux/configureStore';
 
-import Booklist from './components/bookslist';
+import Books from './components/books';
 
 import CategoriesPage from './components/categories';
 
@@ -47,7 +47,7 @@ function App() {
 }
 
 function Home() {
-  return <Booklist />;
+  return <Books />;
 }
 
 function Categories() {
