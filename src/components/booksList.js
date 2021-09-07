@@ -9,21 +9,21 @@ import { getBooks } from '../redux/books/books';
 
 function BooksDisplay() {
   const dispatch = useDispatch();
-  const [items, setitems] = useState();
-  const books = [];
+  const [books, setBooks] = useState([]);
   const fetchItems = async () => {
+    const booksArray = [];
     const data = await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/7QlpK6CmgdU0hZt33zXJ/books');
-    const items = await data.json();
-    Object.entries(items).map((item) => {
+    const books = await data.json();
+    Object.entries(books).map((item) => {
       const book = {
         item_id: item[0],
         title: item[1][0].title,
         category: item[1][0].category,
 
       };
-      books.push(book);
+      booksArray.push(book);
     });
-    setitems(books);
+    setBooks(booksArray);
     dispatch(getBooks(books));
   };
 
@@ -33,9 +33,7 @@ function BooksDisplay() {
 
   return (
     <div>
-      {items.map((item) => (
-        <h1>{item.title}</h1>
-      ))}
+      {books.map((book) => <div>{book.title}</div>)}
     </div>
   );
 }
