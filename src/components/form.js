@@ -51,12 +51,6 @@ const Form = () => {
     });
   };
 
-  const dbook = {
-    id: '77',
-    title: 'War and Peace',
-    category: 'fiction',
-  };
-
   const dispatch = useDispatch();
 
   function submitBookToStoreApiThunks(newBook) {
