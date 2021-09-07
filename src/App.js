@@ -1,3 +1,4 @@
+import './pagination.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,8 +19,8 @@ function App() {
     <Provider store={store}>
       <Router>
         <div>
-          <nav style={{ backgroundColor: 'orange', position: 'fixed', top: '0' }}>
-            <h1>Book Store</h1>
+          <nav style={{ position: 'fixed', top: '0' }}>
+            <h1>Bookstore CMS</h1>
             <div className="links">
               <div className="link home_link">
                 <Link to="/home">Home</Link>

@@ -19,6 +19,7 @@ function BooksDisplay() {
         item_id: item[0],
         title: item[1][0].title,
         category: item[1][0].category,
+        completed: (Math.random() * 100).toFixed(),
 
       };
       booksArray.push(book);
@@ -32,8 +33,20 @@ function BooksDisplay() {
   }, []);
 
   return (
-    <div>
-      {books.map((book) => <div>{book.title}</div>)}
+    <div className="cards">
+      {books.map((book) => (
+        <div className="card">
+          <div className="category">{book.category}</div>
+          <h2>{book.title}</h2>
+          <div className="actions">
+            <div className="comments">Comments</div>
+            <div className="remove">Remove</div>
+            <div>Edit</div>
+          </div>
+          <div className="circle" />
+          <div className="completed">{book.completed}</div>
+        </div>
+      ))}
     </div>
   );
 }

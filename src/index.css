@@ -14,6 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: F5F6FA;
 }
 
 code {
@@ -43,9 +44,9 @@ code {
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100vw;
+  color: blue;
 }
 
 .links {
@@ -54,17 +55,15 @@ nav {
 }
 
 .link {
-  margin-left: 2%;
+  margin-left: 30%;;
   padding: 2px;
 }
 
-.cal_link {
-  border-right: solid 2px;
+.link a {
+  font-size: 15px;
+  color: gray;
 }
 
-.home_link {
-  border-right: solid 2.01px;
-}
 
 h1,
 h2,
@@ -78,5 +77,62 @@ form {
 
 .bookstore,
 .categories {
-  margin-top: 5%;
+  margin-top: 2.5%;
 }
+
+.card {
+  background-color: white;
+  width: 70%;
+  height: 125px;
+  margin-bottom: 5px;
+  border: solid 1px gray;
+  font-size: 15px;;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.cards {
+  margin-left: 1%;
+}
+
+.category {
+  padding-left: 1%;
+  padding-top: 1%;
+}
+
+.actions {
+  display: flex;
+  margin-left: 1%;
+  color: blue;
+}
+
+.comments,
+.remove {
+  margin-right: 1%;
+}
+
+.comments {
+  padding-bottom: 1%;
+}
+
+.circle{
+  position: absolute;
+  left: 850px;
+  top:20px;
+  background: #fff;
+  height: 80px;
+  width: 80px;
+  border: 12px solid;
+  border-radius: 50%;
+  border-color: blue blue blue gray;
+  transform: rotate(45deg);
+}
+
+.completed {
+  position: absolute;
+  left: 960px;
+  top:45px;
+  font-size: 25px;
+}
+
