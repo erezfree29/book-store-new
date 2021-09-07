@@ -74,9 +74,14 @@ const Form = () => {
         <br />
         <label>Category:</label>
         <br />
-        <input type="text" className="category" name="category" onChange={updateAuthor} />
+        <input type="text" name="category" className="category" onChange={updateAuthor} />
         <br />
-        <input type="submit" value="Submit" onClick={submitBook} />
+        <input
+          type="submit"
+          onClick={() => {
+            submitBook(); window.location.reload(false);
+          }}
+        />
       </form>
     </div>
   );
