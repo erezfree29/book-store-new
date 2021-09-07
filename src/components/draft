@@ -37,7 +37,17 @@ function BooksDisplay() {
   return (
     <div className="cards">
       {books.map((book) => (
-        <Book />
+        <div className="card">
+          <div className="category">{book.category}</div>
+          <h2>{book.title}</h2>
+          <div className="actions">
+            <div className="comments">Comments</div>
+            <div className="remove">Remove</div>
+            <div>Edit</div>
+          </div>
+          <div className="circle" />
+          <div className="completed">{book.completed}</div>
+        </div>
       ))}
     </div>
   );
