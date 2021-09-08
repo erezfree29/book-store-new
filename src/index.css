@@ -159,3 +159,18 @@ button {
 .cell_two {
   display: flex;
 }
+
+.dataTables_length {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.dataTables_filter {
+  margin-right: 60px;
+  margin-top: 20px;
+}
+
+.dataTables_paginate {
+  margin-right: 60px;
+}
+
