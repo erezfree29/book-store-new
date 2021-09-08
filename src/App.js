@@ -1,4 +1,3 @@
-import './pagination.css';
 import {
   BrowserRouter as Router,
   Switch,
