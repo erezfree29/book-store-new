@@ -47,6 +47,8 @@ nav {
   align-items: center;
   width: 100vw;
   color: blue;
+  background-color: white;
+  align-items: center;
 }
 
 .links {
@@ -95,8 +97,16 @@ form {
   margin-left: 1%;
 }
 
-.category {
-  width: 200px;
+.category{
+  width: 450px;
+  height: 40px;
+  margin-right: 110px;
+}
+
+.title {
+  width: 700px;
+  margin-right: 50px;
+  height: 40px;
 }
 
 .actions {
@@ -148,10 +158,6 @@ button {
   text-decoration: none;
 }
 
-.title {
-  width: 200px;
-}
-
 .category_field {
   margin-left: 1%;
 }
@@ -172,4 +178,32 @@ button {
 
 .dataTables_paginate {
   margin-right: 60px;
+}
+
+.dataTables_info {
+  margin-left: 2%;
+}
+
+.btn-primary {
+  width: 250px;
+}
+
+.chapter {
+  font-weight: bold;
+}
+
+.add {
+  color: rgb(136,136,136);
+}
+
+.avatar {
+  float: right;
+  margin-left: 60%;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px gray;
 }

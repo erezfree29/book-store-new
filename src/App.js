@@ -7,6 +7,9 @@ import {
 
 import { Provider } from 'react-redux';
 
+// eslint-disable-next-line no-unused-vars
+import avatar from './avatar.png';
+
 import { store } from './redux/configureStore';
 
 import Books from './components/books';
@@ -28,6 +31,7 @@ function App() {
                 <Link to="/categories">Categories</Link>
               </div>
             </div>
+            <div className="avatar"><img src={avatar} alt="avatar" width="30px" /></div>
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and

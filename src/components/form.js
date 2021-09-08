@@ -66,22 +66,22 @@ const Form = () => {
   };
   return (
     <div style={{ marginLeft: '1%' }}>
-      <h3>Add new book</h3>
+      <h3 className="add">Add new book</h3>
       <form>
-        <label>Title:</label>
-        <br />
-        <input type="text" className="title" name="title" onChange={updateTitle} />
-        <br />
-        <label>Category:</label>
-        <br />
-        <input type="text" name="category" className="category" onChange={updateAuthor} />
-        <br />
-        <input
-          type="submit"
+        <input type="text" placeholder="book title" className="title" name="title" onChange={updateTitle} />
+        <select name="category" className="category" onChange={updateAuthor}>
+          <option value="fiction">Fiction</option>
+          <option value="nonfiction">NonFiction</option>
+        </select>
+        <button
+          type="button"
+          className="btn btn-primary"
           onClick={() => {
             submitBook(); setTimeout(() => { location.reload(); }, 3000);
           }}
-        />
+        >
+          ADD BOOK
+        </button>
       </form>
     </div>
   );
