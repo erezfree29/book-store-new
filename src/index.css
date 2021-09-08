@@ -14,7 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: F5F6FA;
+  background-color: rgb(245, 246, 250);
 }
 
 code {
@@ -55,7 +55,7 @@ nav {
 }
 
 .link {
-  margin-left: 30%;;
+  margin-left: 30%;
   padding: 2px;
 }
 
@@ -63,7 +63,6 @@ nav {
   font-size: 15px;
   color: gray;
 }
-
 
 h1,
 h2,
@@ -86,7 +85,7 @@ form {
   height: 125px;
   margin-bottom: 5px;
   border: solid 1px gray;
-  font-size: 15px;;
+  font-size: 15px;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -115,10 +114,10 @@ form {
   padding-bottom: 1%;
 }
 
-.circle{
+.circle {
   position: absolute;
   left: 850px;
-  top:20px;
+  top: 20px;
   background: #fff;
   height: 80px;
   width: 80px;
@@ -131,17 +130,17 @@ form {
 .completed {
   position: absolute;
   left: 960px;
-  top:45px;
+  top: 45px;
   font-size: 25px;
 }
 
 button {
   align-items: normal;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
   border-color: rgb(0, 0, 238);
   border-style: none;
   box-sizing: content-box;
-  color: rgb(0, 0, 238); 
+  color: rgb(0, 0, 238);
   cursor: pointer;
   display: inline;
   font: inherit;
@@ -152,8 +151,6 @@ button {
   transform-origin: 0 0;
   width: auto;
   -moz-appearance: none;
-  -webkit-logical-height: 1em; /* Chrome ignores auto, so we have to use this hack to set the correct height  */
-  -webkit-logical-width: auto; /* Chrome ignores auto, but here for completeness */
   text-decoration: none;
 }
 
@@ -164,4 +161,3 @@ button {
 .category_field {
   margin-left: 1%;
 }
-
