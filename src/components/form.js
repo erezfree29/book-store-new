@@ -65,7 +65,7 @@ const Form = () => {
     event.preventDefault();
   };
   return (
-    <div>
+    <div style={{ marginLeft: '1%' }}>
       <h3>Add new book</h3>
       <form>
         <label>Title:</label>
@@ -79,7 +79,7 @@ const Form = () => {
         <input
           type="submit"
           onClick={() => {
-            submitBook(); window.location.reload(false);
+            submitBook(); setTimeout(() => { location.reload(); }, 3000);
           }}
         />
       </form>

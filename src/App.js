@@ -1,4 +1,3 @@
-import './pagination.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,7 +19,7 @@ function App() {
       <Router>
         <div>
           <nav style={{ position: 'fixed', top: '0' }}>
-            <h1>Bookstore CMS</h1>
+            <h1 style={{ marginLeft: '2%' }}>Bookstore CMS</h1>
             <div className="links">
               <div className="link home_link">
                 <Link to="/home">Home</Link>

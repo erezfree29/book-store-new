@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable array-callback-return */
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
@@ -55,34 +57,48 @@ function BooksDisplay() {
   }, []);
 
   return (
-    <div className="cards">
-      {books.map((book, index) => (
-        <div className="card">
-          <div className="category_field">{book.category}</div>
-          <h2>{book.title}</h2>
-          <div className="actions">
-            <div className="comments">Comments</div>
-            <div className="remove">
-              <button
-                type="submit"
-                onClick={() => {
-                  Delete(book.itemId); window.location.reload(false);
-                }}
-              >
-                Remove
-              </button>
-            </div>
-            <div>Edit</div>
-          </div>
-          <div className="circle" />
-          <div className="completed">
-            {book.completed}
-            %
-            <div>completed</div>
-          </div>
-        </div>
-      ))}
-    </div>
+    <table id="example" className="table">
+      <thead>
+        <tr>
+          <th />
+          <th />
+        </tr>
+      </thead>
+      <tbody>
+        {books.map((book, index) => (
+          <tr>
+            <td>
+              <div className="category_field">{book.category}</div>
+              <h2>{book.title}</h2>
+              <div className="actions">
+                <div className="comments">Comments</div>
+                <div className="remove">
+                  <button
+                    type="submit"
+                    onClick={() => {
+                      Delete(book.itemId); setTimeout(() => { location.reload(); }, 3000);
+                    }}
+                  >
+                    Remove
+                  </button>
+                </div>
+                <div>Edit</div>
+              </div>
+            </td>
+            <td>
+              <div className="cell_two">
+                <div className="circle" />
+                <div className="completed">
+                  {book.completed}
+                  %
+                  <div>completed</div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
 export default BooksDisplay;

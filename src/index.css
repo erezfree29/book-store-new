@@ -81,7 +81,7 @@ form {
 
 .card {
   background-color: white;
-  width: 70%;
+  width: 85%;
   height: 125px;
   margin-bottom: 5px;
   border: solid 1px gray;
@@ -115,9 +115,6 @@ form {
 }
 
 .circle {
-  position: absolute;
-  left: 850px;
-  top: 20px;
   background: #fff;
   height: 80px;
   width: 80px;
@@ -128,9 +125,6 @@ form {
 }
 
 .completed {
-  position: absolute;
-  left: 960px;
-  top: 45px;
   font-size: 25px;
 }
 
@@ -160,4 +154,8 @@ button {
 
 .category_field {
   margin-left: 1%;
+}
+
+.cell_two {
+  display: flex;
 }
