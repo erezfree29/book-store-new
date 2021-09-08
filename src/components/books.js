@@ -1,11 +1,13 @@
 import Form from './form';
 
-const Booklist = () => (
+import BooksDisplay from './booksList';
+
+const Books = () => (
   <div className="bookstore">
     <h1>Welcome to the book store</h1>
-    <h2>Our Books</h2>
+    <BooksDisplay />
     <Form />
   </div>
 );
 
-export default Booklist;
+export default Books;

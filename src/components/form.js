@@ -1,7 +1,10 @@
+/* eslint-disable func-names */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-unused-vars */
 import useState from 'react-hook-use-state';
+
+import { useDispatch } from 'react-redux';
 
 import uniqid from 'uniqid';
 
@@ -48,18 +51,15 @@ const Form = () => {
     });
   };
 
-  function submitBookThunks(newBook) {
-    return function (dispatch) {
-      return postBookTOStore().then(
-        (book) => dispatch(addBook(newBook, book)),
-        (error) => console.log('error'),
-      );
-    };
+  const dispatch = useDispatch();
+
+  function submitBookToStoreApiThunks(newBook) {
+    dispatch(addBook(newBook));
   }
 
-  const submitBook = async () => {
-    await postBookTOStore();
-    await submitBookThunks(newBook);
+  const submitBook = () => {
+    submitBookToStoreApiThunks(newBook);
+    postBookTOStore();
     document.querySelector('.title').value = '';
     document.querySelector('.category').value = '';
     event.preventDefault();
@@ -74,9 +74,14 @@ const Form = () => {
         <br />
         <label>Category:</label>
         <br />
-        <input type="text" className="category" name="category" onChange={updateAuthor} />
+        <input type="text" name="category" className="category" onChange={updateAuthor} />
         <br />
-        <input type="submit" value="Submit" onClick={submitBook} />
+        <input
+          type="submit"
+          onClick={() => {
+            submitBook(); window.location.reload(false);
+          }}
+        />
       </form>
     </div>
   );
