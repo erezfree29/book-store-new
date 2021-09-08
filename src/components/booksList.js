@@ -62,6 +62,7 @@ function BooksDisplay() {
         <tr>
           <th />
           <th />
+          <th />
         </tr>
       </thead>
       <tbody>
@@ -94,6 +95,14 @@ function BooksDisplay() {
                   <div>completed</div>
                 </div>
               </div>
+            </td>
+            <td>
+              <div>CURRENT CHAPTER</div>
+              <div className="chapter">
+                CHAPTER&nbsp;
+                {(book.completed / 4).toFixed()}
+              </div>
+              <button type="button" className="btn btn-primary">UPDATE PROGRESS</button>
             </td>
           </tr>
         ))}
