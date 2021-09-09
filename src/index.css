@@ -17,25 +17,9 @@ body {
   background-color: rgb(245, 246, 250);
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
-}
-
 .calculation {
   background-color: #858694;
   height: 5vh;
-}
-
-.App {
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
 
 .no_border {
@@ -43,7 +27,6 @@ code {
 }
 
 nav {
-  display: flex;
   align-items: center;
   width: 100vw;
   color: blue;
@@ -51,7 +34,6 @@ nav {
 }
 
 .links {
-  display: flex;
   margin-right: 5%;
 }
 
@@ -80,38 +62,26 @@ form {
   margin-top: 2.52%;
 }
 
-.card {
-  background-color: white;
-  width: 85%;
-  height: 125px;
-  margin-bottom: 5px;
-  border: solid 1px gray;
-  font-size: 15px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
 .cards {
   margin-left: 1%;
 }
 
 .category {
-  width: 450px;
+  width: 500px;
   height: 40px;
   margin-right: 110px;
 }
 
 .title {
-  width: 700px;
+  width: 750px;
   margin-right: 50px;
   height: 40px;
+  font-weight: bolder;
 }
 
 .actions {
-  display: flex;
   margin-left: 1%;
-  color: blue;
+  color: #7cabd3;
 }
 
 .comments,
@@ -129,12 +99,14 @@ form {
   width: 80px;
   border: 12px solid;
   border-radius: 50%;
-  border-color: blue blue blue gray;
+  border-color: rgb(2,144,255) rgb(2,144,255) rgb(2,144,255) gray;
   transform: rotate(45deg);
 }
 
 .completed {
-  font-size: 25px;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 2px;
 }
 
 button {
@@ -143,7 +115,7 @@ button {
   border-color: rgb(0, 0, 238);
   border-style: none;
   box-sizing: content-box;
-  color: rgb(0, 0, 238);
+  color: #7cabd3;
   cursor: pointer;
   display: inline;
   font: inherit;
@@ -159,10 +131,6 @@ button {
 
 .category_field {
   margin-left: 1%;
-}
-
-.cell_two {
-  display: flex;
 }
 
 .dataTables_length {
@@ -192,8 +160,8 @@ button {
 }
 
 .add {
-  color: rgb(136, 136, 136);
-}
+  color: #888888;
+} 
 
 .avatar {
   float: right;
@@ -201,8 +169,18 @@ button {
   border-radius: 50%;
   height: 50px;
   width: 50px;
-  display: flex;
   justify-content: center;
   align-items: center;
   border: solid 1px gray;
+}
+
+.completed_text {
+  margin-top: -13px;
+  font-size: 25px;
+  color: gray;
+}
+
+.flex {
+  display: flex;
+
 }

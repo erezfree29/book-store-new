@@ -21,9 +21,9 @@ function App() {
     <Provider store={store}>
       <Router>
         <div>
-          <nav style={{ position: 'fixed', top: '0' }}>
+          <nav style={{ position: 'fixed', top: '0' }} className="flex">
             <h1 style={{ marginLeft: '2%' }}>Bookstore CMS</h1>
-            <div className="links">
+            <div className="links flex">
               <div className="link home_link">
                 <Link to="/home">Home</Link>
               </div>
@@ -31,7 +31,7 @@ function App() {
                 <Link to="/categories">Categories</Link>
               </div>
             </div>
-            <div className="avatar"><img src={avatar} alt="avatar" width="30px" /></div>
+            <div className="avatar flex"><img src={avatar} alt="avatar" width="30px" /></div>
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and

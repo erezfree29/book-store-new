@@ -71,7 +71,7 @@ function BooksDisplay() {
             <td>
               <div className="category_field">{book.category}</div>
               <h2>{book.title}</h2>
-              <div className="actions">
+              <div className="actions flex">
                 <div className="comments">Comments</div>
                 <div className="remove">
                   <button
@@ -87,12 +87,12 @@ function BooksDisplay() {
               </div>
             </td>
             <td>
-              <div className="cell_two">
+              <div className="cell_two flex">
                 <div className="circle" />
                 <div className="completed">
                   {book.completed}
                   %
-                  <div>completed</div>
+                  <div className="completed_text">completed</div>
                 </div>
               </div>
             </td>
