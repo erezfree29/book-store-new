@@ -99,7 +99,7 @@ form {
   width: 80px;
   border: 12px solid;
   border-radius: 50%;
-  border-color: rgb(2,144,255) rgb(2,144,255) rgb(2,144,255) gray;
+  border-color: rgb(2, 144, 255) rgb(2, 144, 255) rgb(2, 144, 255) gray;
   transform: rotate(45deg);
 }
 
@@ -160,8 +160,8 @@ button {
 }
 
 .add {
-  color: #888888;
-} 
+  color: #888;
+}
 
 .avatar {
   float: right;
@@ -182,5 +182,4 @@ button {
 
 .flex {
   display: flex;
-
 }
