@@ -7,9 +7,12 @@ import {
 
 import { Provider } from 'react-redux';
 
+// eslint-disable-next-line no-unused-vars
+import avatar from './avatar.png';
+
 import { store } from './redux/configureStore';
 
-import Booklist from './components/bookslist';
+import Books from './components/books';
 
 import CategoriesPage from './components/categories';
 
@@ -18,9 +21,9 @@ function App() {
     <Provider store={store}>
       <Router>
         <div>
-          <nav style={{ backgroundColor: 'orange', position: 'fixed', top: '0' }}>
-            <h1>Book Store</h1>
-            <div className="links">
+          <nav style={{ position: 'fixed', top: '0' }} className="flex">
+            <h1 style={{ marginLeft: '2%' }}>Bookstore CMS</h1>
+            <div className="links flex">
               <div className="link home_link">
                 <Link to="/home">Home</Link>
               </div>
@@ -28,6 +31,7 @@ function App() {
                 <Link to="/categories">Categories</Link>
               </div>
             </div>
+            <div className="avatar flex"><img src={avatar} alt="avatar" width="30px" /></div>
           </nav>
 
           {/* A <Switch> looks through its children <Route>s and
@@ -47,7 +51,7 @@ function App() {
 }
 
 function Home() {
-  return <Booklist />;
+  return <Books />;
 }
 
 function Categories() {

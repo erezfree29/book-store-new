@@ -1,7 +1,10 @@
+/* eslint-disable func-names */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-unused-vars */
 import useState from 'react-hook-use-state';
+
+import { useDispatch } from 'react-redux';
 
 import uniqid from 'uniqid';
 
@@ -48,35 +51,37 @@ const Form = () => {
     });
   };
 
-  function submitBookThunks(newBook) {
-    return function (dispatch) {
-      return postBookTOStore().then(
-        (book) => dispatch(addBook(newBook, book)),
-        (error) => console.log('error'),
-      );
-    };
+  const dispatch = useDispatch();
+
+  function submitBookToStoreApiThunks(newBook) {
+    dispatch(addBook(newBook));
   }
 
-  const submitBook = async () => {
-    await postBookTOStore();
-    await submitBookThunks(newBook);
+  const submitBook = () => {
+    submitBookToStoreApiThunks(newBook);
+    postBookTOStore();
     document.querySelector('.title').value = '';
     document.querySelector('.category').value = '';
     event.preventDefault();
   };
   return (
-    <div>
-      <h3>Add new book</h3>
+    <div style={{ marginLeft: '1%' }}>
+      <h3 className="add">Add new book</h3>
       <form>
-        <label>Title:</label>
-        <br />
-        <input type="text" className="title" name="title" onChange={updateTitle} />
-        <br />
-        <label>Category:</label>
-        <br />
-        <input type="text" className="category" name="category" onChange={updateAuthor} />
-        <br />
-        <input type="submit" value="Submit" onClick={submitBook} />
+        <input type="text" placeholder="book title" className="title" name="title" onChange={updateTitle} />
+        <select name="category" className="category" onChange={updateAuthor}>
+          <option value="fiction">Fiction</option>
+          <option value="nonfiction">NonFiction</option>
+        </select>
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={() => {
+            submitBook(); setTimeout(() => { location.reload(); }, 3000);
+          }}
+        >
+          ADD BOOK
+        </button>
       </form>
     </div>
   );

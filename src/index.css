@@ -14,16 +14,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+  background-color: rgb(245, 246, 250);
 }
 
 .calculation {
@@ -31,50 +22,165 @@ code {
   height: 5vh;
 }
 
-.App {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
 .no_border {
   border: none;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100vw;
+  color: blue;
+  background-color: white;
 }
 
 .links {
-  display: flex;
   margin-right: 5%;
 }
 
 .link {
-  margin-left: 2%;
+  margin-left: 30%;
   padding: 2px;
 }
 
-.cal_link {
-  border-right: solid 2px;
+.link a {
+  font-size: 15px;
+  color: gray;
 }
 
-.home_link {
-  border-right: solid 2.01px;
-}
-
-h1 {
+h1,
+h2,
+h3 {
   margin-left: 1%;
 }
 
 form {
   margin-left: 1%;
+  margin-bottom: 5%;
 }
 
 .bookstore,
 .categories {
-  margin-top: 9%;
+  margin-top: 2.52%;
+}
+
+.cards {
+  margin-left: 1%;
+}
+
+.category {
+  width: 500px;
+  height: 40px;
+  margin-right: 110px;
+}
+
+.title {
+  width: 750px;
+  margin-right: 50px;
+  height: 40px;
+  font-weight: bolder;
+}
+
+.actions {
+  margin-left: 1%;
+  color: #7cabd3;
+}
+
+.comments,
+.remove {
+  margin-right: 1%;
+}
+
+.comments {
+  padding-bottom: 1%;
+}
+
+.circle {
+  background: #fff;
+  height: 80px;
+  width: 80px;
+  border: 12px solid;
+  border-radius: 50%;
+  border-color: rgb(2, 144, 255) rgb(2, 144, 255) rgb(2, 144, 255) gray;
+  transform: rotate(45deg);
+}
+
+.completed {
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 2px;
+}
+
+button {
+  align-items: normal;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgb(0, 0, 238);
+  border-style: none;
+  box-sizing: content-box;
+  color: #7cabd3;
+  cursor: pointer;
+  display: inline;
+  font: inherit;
+  height: auto;
+  padding: 0;
+  perspective-origin: 0 0;
+  text-align: start;
+  transform-origin: 0 0;
+  width: auto;
+  -moz-appearance: none;
+  text-decoration: none;
+}
+
+.category_field {
+  margin-left: 1%;
+}
+
+.dataTables_length {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.dataTables_filter {
+  margin-right: 60px;
+  margin-top: 20px;
+}
+
+.dataTables_paginate {
+  margin-right: 60px;
+}
+
+.dataTables_info {
+  margin-left: 2%;
+}
+
+.btn-primary {
+  width: 250px;
+}
+
+.chapter {
+  font-weight: bold;
+}
+
+.add {
+  color: #888;
+}
+
+.avatar {
+  float: right;
+  margin-left: 60%;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px gray;
+}
+
+.completed_text {
+  margin-top: -13px;
+  font-size: 25px;
+  color: gray;
+}
+
+.flex {
+  display: flex;
 }
